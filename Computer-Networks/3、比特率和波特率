@@ -1,9 +1,44 @@
 1、在电子通信领域，波特（Baud）即调制速率，指的是有效数据信号调制载波的速率，即单位时间内载波调制状态变化的次数。
 
-baud (/ˈbɔːd/; symbol: Bd) is the unit for symbol rate or modulation rate in symbols per second or pulses per second.（脉冲每秒）
+The symbol rate is related to gross bit rate expressed in bit/s. The term baud has sometimes incorrectly been used to mean bit rate,
+
+since these rates are the same in old modems as well as in the simplest digital communication links using only one bit per symbol, 
+
+such that binary digit "0" is represented by one symbol, and binary digit "1" by another symbol. In more advanced modems and data 
+
+transmission techniques, a symbol may have more than two states, so it may represent more than one bit. A bit (binary digit) always 
+
+represents one of two states.
+
+
+
+If N bits are conveyed per symbol, and the gross bit rate is R, inclusive of channel coding overhead, the symbol rate fs can be calculated as
+
+{\displaystyle f_{\mathrm {s} }={R \over N}.}   f_\mathrm{s}  =   {R \over N}. 
+By taking information per pulse N in bit/pulse to be the base-2-logarithm of the number of distinct messages M that could be sent, 
+
+Hartley[3] constructed a measure of the gross bitrate R as
+
+{\displaystyle R=f_{\mathrm {s} }N\quad }   R  =   f_\mathrm{s} N\quad   where {\displaystyle \quad N=\log _{2}(M).} \quad N = \log_2(M).
+In that case M = 2N, different symbols are used. In a modem, these may be time-limited sinewave tones with unique combinations of 
+
+amplitude, phase and/or frequency. For example, in a 64QAM modem, M = 64, and so the bit rate is N = log2(64) = 6 times the baud rate. 
+
+In a line code, these may be M different voltage levels.
+
+The ratio is not necessarily even an integer; in 4B3T coding, the bit rate is 4/3 of the baud rate. (A typical basic rate interface with
+
+a 160 kbit/s raw data rate operates at 120 kBd.)
+
+Codes with many symbols, and thus a bit rate higher than the symbol rate, are most useful on channels such as telephone lines with a 
+
+limited bandwidth but a high signal-to-noise ratio within that bandwidth. In other applications, the bit rate is less than the symbol 
+
+rate. Eight-to-fourteen modulation as used on audio CDs has bit rate 8/14 of the baud rate.
+
+
 
 它是对符号传输速率的一种度量，1波特即指每秒传输1个符号，而通过不同的调制方式，可以在一个码元符号上负载多个bit位信息。
-
 
 
 2、“波特”（Baud）本身已是速率，所以不需要写成 Baud Rate（Rate 是赘字）。单位“波特”本身就已经是代表每秒的调制数，以“波特每秒”（Baud per second）为单位
