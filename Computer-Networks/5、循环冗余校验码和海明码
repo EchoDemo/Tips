@@ -10,7 +10,8 @@ of their contents. On retrieval, the calculation is repeated and, in the event t
 against data corruption.
 
 
-From 循环冗余校验CRC简介：
+
+循环冗余校验CRC简介：
 
 （1）CRC为校验和的一种，是两个字节数据流采用二进制除法（没有借位和进位，使用异或来代替减法）相除所得到的余数。
 
@@ -35,3 +36,29 @@ From 循环冗余校验CRC简介：
 在传输过程中没有出错。尽管在错误检测中非常有用，CRC并不能可靠地校验数据完整性（即数据没有发生任何变化），这是因为CRC多项式是线性结构，
 
 可以非常容易地故意改变量据而维持CRC不变。
+
+
+
+2、海明码：
+
+
+Hamming codes can detect up to two-bit errors or correct one-bit errors without detection of uncorrected errors. By contrast, 
+
+the simple parity code cannot correct errors, and can detect only an odd number of bits in error. Hamming codes are perfect codes, 
+
+that is, they achieve the highest possible rate for codes with their block length and minimum distance of thre.
+
+
+ 海明码（也叫汉明码）具有一位纠错能力。以1010110这个二进制数为例解释海明码的编码和校验方法。
+
+（1）确定校验码的位数x:
+
+　　设数据有n位，校验码有x位。则校验码一共有2^x种取值方式。其中需要一种取值方式表示数据正确，剩下2^x-1种取值方式表示有一位数据出错。
+  
+因为编码后的二进制串有n+x位，因此x应该满足:2^x-1 ≥　n+x;使不等式成立的x的最小值就是校验码的位数。在本例中，n=7，解得x=4。
+
+(2)确定校验码位置:
+
+
+
+    海明码的校验码的位置必须是在2^n位置（n从0 开始，分别代表从左边数起分别是第1、2、4、8、16……），信息码也就是在非2n次方位置
