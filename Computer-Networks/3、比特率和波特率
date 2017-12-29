@@ -10,17 +10,21 @@ transmission techniques, a symbol may have more than two states, so it may repre
 
 represents one of two states.
 
+If N bits are conveyed per symbol, and the gross bit rate is R, inclusive of channel coding overhead, the symbol rate fs can be calculated
+
+as 
+
+             fs=R\N  
 
 
-If N bits are conveyed per symbol, and the gross bit rate is R, inclusive of channel coding overhead, the symbol rate fs can be calculated as
-
-{\displaystyle f_{\mathrm {s} }={R \over N}.}   f_\mathrm{s}  =   {R \over N}. 
 By taking information per pulse N in bit/pulse to be the base-2-logarithm of the number of distinct messages M that could be sent, 
 
-Hartley[3] constructed a measure of the gross bitrate R as
+Hartley constructed a measure of the gross bitrate R as
 
-{\displaystyle R=f_{\mathrm {s} }N\quad }   R  =   f_\mathrm{s} N\quad   where {\displaystyle \quad N=\log _{2}(M).} \quad N = \log_2(M).
-In that case M = 2N, different symbols are used. In a modem, these may be time-limited sinewave tones with unique combinations of 
+             R=fs.N     where  N=log2(M)
+
+
+In that case M = 2^N, different symbols are used. In a modem, these may be time-limited sinewave tones with unique combinations of 
 
 amplitude, phase and/or frequency. For example, in a 64QAM modem, M = 64, and so the bit rate is N = log2(64) = 6 times the baud rate. 
 
